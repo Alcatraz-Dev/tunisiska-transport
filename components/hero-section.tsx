@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { TextEffect } from "@/components/ui/text-effect";
 import { AnimatedGroup } from "@/components/ui/animated-group";
-import { WorldMapComponent } from "./WorldMap/WorldMapComponent";
 import { TextGenerateEffectComponent } from "./TextGenerateEffect/TextGenerateEffectComponent";
+import SuspensedWorldMap from "./ui/suspensed-world-map";
 
 const transitionVariants = {
   item: {
@@ -71,9 +71,9 @@ export default function HeroSection() {
               className="absolute inset-0 -z-20"
             >
               <Image
-                src="https://res.cloudinary.com/dg4jhba5c/image/upload/v1741605538/night-background_ni3vqb.jpg"
+                src="/images/container.jpg"
                 alt="background"
-                className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
+                className="absolute inset-x-0 top-56 -z-20  lg:top-32 "
                 width="3276"
                 height="4095"
               />
@@ -188,7 +188,7 @@ export default function HeroSection() {
                   className="bg-linear-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
                 />
                 <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-                  <WorldMapComponent />
+                <SuspensedWorldMap />
                 </div>
               </div>
             </AnimatedGroup>

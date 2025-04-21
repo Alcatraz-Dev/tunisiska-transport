@@ -2,7 +2,7 @@
 import { useTheme } from "next-themes";
 import React from "react";
 
-import { MoonIcon, SunIcon } from "lucide-react";
+import { MoonStarIcon, SunIcon } from "lucide-react";
 import { Button } from "../ui/button";
 
 function ThemeToggle({ className }: { className?: string }) {
@@ -11,12 +11,12 @@ function ThemeToggle({ className }: { className?: string }) {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <Button
-        variant={"outline"}
+        variant={"ghost"}
         size={"icon"}
         className="rounded-full hover:cursor-pointer "
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
-        <MoonIcon
+        <MoonStarIcon
           className="absolute h-6 w-6 transform transition-transform duration-700 ease-in-out
         text-gradient-to-r from-transparent text-blue-500 to-transparent 
              rotate-180 scale-0 opacity-0
