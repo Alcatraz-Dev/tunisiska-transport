@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from 'path';
 
 const nextConfig: NextConfig = {
   eslint: {
@@ -25,6 +26,18 @@ const nextConfig: NextConfig = {
       }
     ],
   },
+    webpack: (config: any) => {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'react': path.resolve('./node_modules/react'),
+        'react-dom': path.resolve('./node_modules/react-dom'),
+        'three': path.resolve('./node_modules/three')
+      };
+      return config;
+    },
+    experimental: {
+      esmExternals: 'loose'
+    }
 };
 
 export default nextConfig;
