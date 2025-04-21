@@ -61,7 +61,7 @@ function Card({ card }: { card: typeof cards[0] }) {
 
 function CardsGrid() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8 w-full max-w-6xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 p-8  w-full max-w-6xl mx-auto">
       {cards.map((card, index) => (
         <Card key={index} card={card} />
       ))}
